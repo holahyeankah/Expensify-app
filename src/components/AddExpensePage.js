@@ -14,10 +14,10 @@ class AddExpensePage extends Component{
   return(
     <div>
 
-<p>Add your items</p>
+<p className="add-space">Add your items</p>
 <ExpenseForm onSubmit={(expense)=>{
       this.props.dispatch(addExpense(expense))
-       this.props.history.push('/')
+       this.props.history.push('/dashboard')
     }}/>
     </div>
   )

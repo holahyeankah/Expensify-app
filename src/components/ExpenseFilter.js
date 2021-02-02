@@ -24,11 +24,13 @@ class ExpenseFilter extends Component{
     }
     render(){
         return(
+            <div>
  
-    <div>
-        
-        <input type="text" value={this.props.filter.text} onChange={(e)=>this.props.dispatch(setText(e.target.value))}/>
-
+    <div className="input-group">
+        <div className="input-group-item">
+        <input type="text" placeholder="search expenses" value={this.props.filter.text} onChange={(e)=>this.props.dispatch(setText(e.target.value))}/>
+        </div>
+        <div className="input-group-item">
         <select
          value={this.props.filter.sortBy}
         onChange={(e)=>{
@@ -42,6 +44,10 @@ class ExpenseFilter extends Component{
             <option value="date">Date</option>
             <option value="amount">Amount</option>
         </select>
+
+        </div>
+        <div className="input-group-item">
+
         <DateRangePicker
         startDate={this.props.filter.startDate}
         endDate={this.props.filter.endDate}
@@ -53,6 +59,12 @@ class ExpenseFilter extends Component{
         showClearDates={true}
 
         />
+        </div>
+        
+     
+
+      
+    </div>
     </div>
 
         )

@@ -17,6 +17,7 @@ export default (state=filterArray, action)=>{
             }
             case 'SET_AMOUNT':
                 return{
+                  
                ...state,
                 sortBy:'amount'
                 }

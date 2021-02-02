@@ -1,14 +1,19 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 const Header=()=>{
     return(
-        <div>
-<h1>EXEMPLIFY</h1>
-<NavLink to="/" activeClassName="active" exact={true}>Dashboard</NavLink>
-<NavLink to="/create" activeClassName="active">AddPage</NavLink>
-<NavLink to="/help" activeClassName="active">Help</NavLink>
+        <div className="header-logo">
+            <div className="header-style">
+<Link className="header-top" to="/dashboard">
+    <h1>Exemplify</h1>
+        </Link>
+
+<Link className="header-top" to="">
+  <h1> Logout</h1> 
+    </Link>
+</div>
 
 
         </div>

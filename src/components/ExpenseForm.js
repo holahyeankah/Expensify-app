@@ -68,12 +68,20 @@ onDateChange(createdAt){
 
     }
     render(){
-        return(
-            <div>
-               {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.onSubmit}>
-                <input type="text" placeholder="Description" autoFocus value={this.state.description} onChange={this.onDescriptionChange}/>
-                <input type="text" placeholder="Amount" value={this.state.amount} onChange={this.onAmountChange}/>
+        return(            
+               
+                <form className="input-form" onSubmit={this.onSubmit}>
+                 {this.state.error && <p className="input-form-error">{this.state.error}</p>}
+            
+                    <div className="input-form-space">
+                <input type="text" className="input-text" placeholder="Description" autoFocus value={this.state.description} onChange={this.onDescriptionChange}/>
+                </div>
+
+                    <div className="input-form-space">
+                <input type="text"  className="input-text" placeholder="Amount" value={this.state.amount} onChange={this.onAmountChange}/>
+                </div>
+
+                    <div className="input-form-space">
                 <SingleDatePicker 
                 date={this.state.createdAt}
                 onDateChange={this.onDateChange}
@@ -82,14 +90,27 @@ onDateChange(createdAt){
                 numberOfMonths={1}
                 isOutsideRange={()=>false}
                 />
+                  </div>
+                  <div className="input-form-space">
                 <textarea
+                className="input-text"
                  placeholder="Add expense note (optional)" value={this.state.notes}
                  onChange={this.onNoteChange}
                 > 
                 </textarea>
-                <button>Add expense</button>
+                </div>
+                <div className="add-button-space">
+                      <button className="add-button">Save Expense</button>
+
+                </div>
+
+              
+       
                 </form>
-            </div>
+              
+           
+            
+           
         )
     }
 }

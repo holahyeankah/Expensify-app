@@ -8,7 +8,8 @@ export const addExpense=({description='', notes='', amount=0, createdAt=0}={})=>
         amount,
         createdAt
 
-    }
+    },
+   
 })
 export const removeExpense=({id}={})=>({
     type:'REMOVE_EXPENSE',
@@ -19,3 +20,4 @@ export const editExpense=(id,updates)=>({
     id,
     updates
 })
+
