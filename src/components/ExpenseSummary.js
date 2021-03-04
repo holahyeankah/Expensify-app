@@ -6,7 +6,7 @@ import numeral from 'numeral';
 import {Link} from 'react-router-dom';
 
 const ExpenseSummary=({expenseCount, expenseTotal})=>{
-    const expenseWord=expenseCount === 1 ? 'expense': 'expenses'
+    const expenseWord=expenseCount > 1 ? 'expenses': 'expense'
     const Total= numeral(expenseTotal/100).format('$0,0.00')
     
 
