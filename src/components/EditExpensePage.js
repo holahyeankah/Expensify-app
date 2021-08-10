@@ -17,11 +17,11 @@ render(){
               expense={this.props.expense}
               onSubmit={(expense)=>{
             this.props.dispatch(editExpense(this.props.expense.id, expense))
-             this.props.history.push('/dashboard')
+             this.props.history.push('/')
               }}
               /><br/>
               <button className="remove-button" onClick={()=>{this.props.dispatch(removeExpense({id:this.props.expense.id}));
-                  this.props.history.push('/dashboard')
+                  this.props.history.push('/')
             }}>Remove Expense</button>
           
             </div>

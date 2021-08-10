@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
-// let login=true;
-
-// const toggle=()=>{
-//     login=!login
-  
-// }
 class Header extends Component{
     constructor(props){
         super(props);
     }
-      
-   
+       
 
     render(){
       
@@ -24,7 +17,7 @@ class Header extends Component{
     <h1>Home</h1>
         </Link>
 
- <Link className="header-top" to="/dashboard">
+ <Link className="header-top" to="/">
     <h1> Exemplify</h1> 
   
     </Link> 
@@ -37,4 +30,4 @@ class Header extends Component{
 }
    
 
-export default Header
+export default Header;

@@ -20,6 +20,7 @@ export default (state=expenseArray, action)=>{
                 }else{
                     return expense
                 }
+                
 
             }))
               
